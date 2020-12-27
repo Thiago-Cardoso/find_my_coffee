@@ -24,6 +24,7 @@
 
 - **Docker**
 - **Rails Api**
+- **Postgis**
 - **ReactJS**
 
 ## Features
@@ -79,16 +80,25 @@ After copying the repository to your machine, go to the project's root site and:
 docker-compose build
 ```
 
-2.  Run the project API
+2. Created database and run migrate for project API
+
+```
+docker-compose run --rm app bundle exec rails db:create db:migrate 
+```
+
+3.  Run the project API 
 
 ```
 docker-compose up - d
 ```
 The api run in the port 3000 -http://localhost:3000
 
-3.  Run the project Web
+
+4.  Run the project Web
+```
 npm install or yarn install
 npm start or yarn start
+```
 
 The Web run in the port 3001 -http://localhost:3001
 
